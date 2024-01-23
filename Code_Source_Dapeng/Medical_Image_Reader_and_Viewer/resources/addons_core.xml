@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addonCore><label>Medical Image Reader and Viewer</label><version>3.9</version><type>Toolbox</type><identifier>4f46570a-b206-4355-b272-187584abb5fc</identifier><summary>A toolbox to handle reading, viewing, and writing dicom images, supporting simultaneous PET/MR</summary><description>This toolbox can read and write medical imaging data in dicom format with the 'readImages' function. The output of this function is a structure containing attributes of the image or volume. This structure can then be used as input into other functions in the toolbox.
+This toolbox supports: 
+ - reading and writing of dicom data 
+ - mapping of volume voxel locations 
+ - oblique slice alignment and registration 
+ - manual 3D image rotation
+ - selecting and extracting single voxel coordinates
+ - drawing 2D or 3D region-of-interest masks
+ - coregistered image viewing supports PET/CT and PET/MR 
+
+Syntax: 
+	CT = readImages([CT_ImageDirectoryPath]); 
+	PET = readImages([PET_ImageDirectoryPath]); 
+	VolumeViewer3D(CT,PET)
+	VolumeViewer3D(CT,PET,'align','trim')
+	coords = VolumeViewer3D(PET,CT,'getCoords');
+	mask = VolumeViewer3D(PET,CT,'drawROI');
+
+Other Requirements
+
+None.</description><createdBy name="Josh Schaefferkoetter"/><image>resources/screenshot.png</image></addonCore>
